@@ -25,7 +25,8 @@
 				      <th scope="col">Jenis Kelamin</th>
 				      <th scope="col">Alamat</th>
 				      <th scope="col">Jabatan</th>
-				      <th scope="col">Tahun Masuk</th>
+				      <th scope="col">Tahun</th>
+				      <th scope="col" class="text-center">Opsi</th>
 				    </tr>
 				  </thead>
 				</table>	
@@ -51,11 +52,30 @@
                     "type": "POST"
                 },
                 "columnDefs": [{
-                    "targets": [],
+                    "targets": 6,
+                    "defaultContent": `<div class="text-center"><button class="btn btn-primary btn-sm" id="btnEdit">Edit</button>
+                    <button class="btn btn-primary btn-sm" id="btnDel">Hapus</button></div>`,
                     "orderable": false,
                 }]
             });
         });
+
+		// fungsi CRUD
+        // $('#tabelAnggota tbody').on('click', '#btnEdit', function() {
+	    //   let data = tabel.row($(this).parents('tr')).data();
+	    //   window.location.href = 'index.php?halaman=edit_dt_anggota&id='+ data[0];
+	    // });
+
+	    // $('#tabelAnggota tbody').on('click', '#btnDel', function() {
+	    //   let data = tabel.row($(this).parents('tr')).data();
+	    //   let notice;
+
+	    //   if (confirm("Anda yakin ingin menghapusnya?") == true) {
+	    //     window.location.href = 'fungsi_delete/delete_dt_anggota.php?id='+ data[0];
+	    //   } else {
+	    //     notice = "";
+	    //   }
+	    // });
 		
 	</script>
 </body>
